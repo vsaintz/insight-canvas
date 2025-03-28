@@ -1,9 +1,9 @@
+import DashboardContainer from "./components/dashboard/DashboardContainer"
+
 function App() {
 
   return (
-    <div>
-      <p>hello</p>
-    </div>
+    <DashboardContainer />
   )
 }
 
