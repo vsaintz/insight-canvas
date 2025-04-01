@@ -45,7 +45,7 @@ const ControlPanel = () => {
 
                 <button className="flex items-center gap-2 w-full mt-2 p-1 rounded-lg bg-[var(--global-gray)]">
                     <IoDocumentTextOutline size={16} />
-                    <span className="text-sm font-medium">Starting Out</span>
+                    <span className="text-sm font-medium">Introduction</span>
                 </button>
             </div>
 
