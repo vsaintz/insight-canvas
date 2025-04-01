@@ -1,0 +1,90 @@
+import {
+    FaGitlab,
+    TbDashboard,
+    AiOutlineFundProjectionScreen,
+    IoDocumentTextOutline,
+    FiActivity,
+    IoMdMore,
+    CiSettings,
+    IoMdHelpCircleOutline,
+} from "../utils/icons";
+
+const ControlPanel = () => {
+
+    const branding = {
+        icon: <FaGitlab size={20} className="text-[var(--font-color)]" />,
+        title: "Insight Canvas"
+    };
+
+    const tools = [
+        { id: 1, icon: <TbDashboard size={16} />, title: "Dashboard", },
+        { id: 2, icon: <AiOutlineFundProjectionScreen size={16} />, title: "Projects", },
+        { id: 3, icon: <FiActivity size={16} />, title: "Charts" }
+    ];
+
+    const userOptions = [
+        { id: 1, icon: <CiSettings size={16} />, title: "Settings" },
+        { id: 2, icon: <IoMdHelpCircleOutline size={16} />, title: "Get Help" }
+    ];
+
+    const profile = {
+        icon: <img src="/2bf09ffc1dccf19ba1ba7cf7535cbb0.jpg" className="w-10 h-10 rounded-lg" alt="Profile Picture" />,
+        username: "Emma Myers",
+        email: "emma.myers@gmail.com"
+    };
+
+    return (
+        <div className="flex flex-col gap-7 h-full">
+
+            {/* Branding Section */}
+            <div className="p-6 text-[var(--font-color)]">
+                <div className="flex items-center gap-3 mb-5">
+                    {branding.icon}
+                    <h1 className="text-base font-semibold">{branding.title}</h1>
+                </div>
+
+                <button className="flex items-center gap-2 w-full mt-2 p-1 rounded-lg bg-[var(--global-gray)]">
+                    <IoDocumentTextOutline size={16} />
+                    <span className="text-sm font-medium">Starting Out</span>
+                </button>
+            </div>
+
+            {/* Tools Section */}
+            <div className="flex flex-col gap-1 px-6  text-[var(--font-color)]">
+                {tools.map((tool) => (
+                    <button
+                        key={tool.id}
+                        className={"flex items-center gap-2 p-1 my-[2px]  w-full rounded-lg hover:bg-[var(--secondary-color)]"}>
+                        {tool.icon}
+                        <span className="text-sm">{tool.title}</span>
+                    </button>
+                ))}
+            </div>
+
+            {/* Profile Section */}
+            <div className="mt-auto p-5">
+                <div className="my-10 text-[var(--font-color)]">
+                    {userOptions.map((userOption) => (
+                        <button
+                            key={userOption.id}
+                            className={"flex items-center gap-2 p-1 my-[2px]  w-full rounded-lg hover:bg-[var(--secondary-color)]"}>
+                            {userOption.icon}
+                            <span className="text-sm">{userOption.title}</span>
+                        </button>
+                    ))}
+
+                </div>
+                <div className="flex gap-3 text-[var(--font-color)] p-2">
+                    {profile.icon}
+                    <div className="flex flex-col">
+                        <span className="text-sm">{profile.username}</span>
+                        <span className="text-[0.7rem] text-gray-300">{profile.email}</span>
+                    </div>
+                    <button className="mx-auto hover:bg-[var(--secondary-color)] rounded-lg"><IoMdMore size={20} /></button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default ControlPanel;
