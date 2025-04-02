@@ -1,16 +1,31 @@
+import { useState } from "react";
+
 import ControlPanel from "./ControlPanel";
-import WorkPanel from "./MainPanel";
+import MainPanel from "./MainPanel";
+import { LuPanelLeft } from "../utils/icons";
 
 const DashboardContainer = () => {
+
+    const [activeComponent, setActiveComponent] = useState('introduction');
+
     return (
         <div className="flex h-screen bg-[var(--root-color)]">
-            <div className="w-1/6 bg-[var(--root-color)]">
-                <ControlPanel />
-            </div>
+            <aside className="w-1/6">
+                <ControlPanel onButtonClick={setActiveComponent} />
+            </aside>
 
-            <div className="flex-1 bg-[var(--work-panel-bg)] m-2 rounded-2xl">
-                <WorkPanel />
-            </div>
+            <main className="flex flex-col flex-1 text-[var(--font-color)] bg-[var(--work-panel-bg)] m-2 rounded-2xl">
+                <header className="flex items-center w-full h-12 rounded-t-2xl border-b border-[var(--secondary-color)] px-5">
+                    <div className="w-10 border-r border-[var(--secondary-color)]">
+                        <LuPanelLeft size={20} />
+                    </div>
+                    <h1 className="ml-4">Dashboard</h1>
+                </header>
+
+                <section className="flex-1 rounded-2xl">
+                    <MainPanel activeComponent={activeComponent} />
+                </section>
+            </main>
         </div>
     );
 }
