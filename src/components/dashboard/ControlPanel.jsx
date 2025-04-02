@@ -9,7 +9,7 @@ import {
     IoMdHelpCircleOutline,
 } from "../utils/icons";
 
-const ControlPanel = () => {
+const ControlPanel = ({ onButtonClick }) => {
 
     const branding = {
         icon: <FaGitlab size={20} className="text-[var(--font-color)]" />,
@@ -17,9 +17,10 @@ const ControlPanel = () => {
     };
 
     const tools = [
-        { id: 1, icon: <TbDashboard size={16} />, title: "Dashboard", },
-        { id: 2, icon: <AiOutlineFundProjectionScreen size={16} />, title: "Projects", },
-        { id: 3, icon: <FiActivity size={16} />, title: "Charts" }
+        { id: 'introduction', icon: <IoDocumentTextOutline size={16} />, title: "Introduction" },
+        { id: 'dashboard', icon: <TbDashboard size={16} />, title: "Dashboard", },
+        { id: 'projects', icon: <AiOutlineFundProjectionScreen size={16} />, title: "Projects", },
+        { id: 'charts', icon: <FiActivity size={16} />, title: "Charts" }
     ];
 
     const userOptions = [
@@ -42,11 +43,6 @@ const ControlPanel = () => {
                     {branding.icon}
                     <h1 className="text-base font-semibold">{branding.title}</h1>
                 </div>
-
-                <button className="flex items-center gap-2 w-full mt-2 p-1 rounded-lg bg-[var(--global-gray)]">
-                    <IoDocumentTextOutline size={16} />
-                    <span className="text-sm font-medium">Introduction</span>
-                </button>
             </div>
 
             {/* Tools Section */}
@@ -54,11 +50,13 @@ const ControlPanel = () => {
                 {tools.map((tool) => (
                     <button
                         key={tool.id}
-                        className={"flex items-center gap-2 p-1 my-[2px]  w-full rounded-lg hover:bg-[var(--secondary-color)]"}>
+                        className={"flex items-center gap-2 p-1 my-[2px]  w-full rounded-lg hover:bg-[var(--secondary-color)]"}
+                        onClick={() => onButtonClick(tool.id)}>
                         {tool.icon}
                         <span className="text-sm">{tool.title}</span>
                     </button>
                 ))}
+
             </div>
 
             {/* Profile Section */}
