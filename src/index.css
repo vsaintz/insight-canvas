@@ -6,6 +6,7 @@ body {
 
 :root {
     --root-color: #151515;
+    --secondary-root: #0a0a0a;
     --work-panel-bg: black;
     --font-color: white;
     --secondary-color: #2E2E2E;

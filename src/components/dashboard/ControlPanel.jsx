@@ -56,7 +56,6 @@ const ControlPanel = ({ onButtonClick }) => {
                         <span className="text-sm">{tool.title}</span>
                     </button>
                 ))}
-
             </div>
 
             {/* Profile Section */}
@@ -70,8 +69,8 @@ const ControlPanel = ({ onButtonClick }) => {
                             <span className="text-sm">{userOption.title}</span>
                         </button>
                     ))}
-
                 </div>
+
                 <div className="flex gap-3 text-[var(--font-color)] p-2">
                     {profile.icon}
                     <div className="flex flex-col">
@@ -81,6 +80,7 @@ const ControlPanel = ({ onButtonClick }) => {
                     <button className="mx-auto hover:bg-[var(--secondary-color)] rounded-lg"><IoMdMore size={20} /></button>
                 </div>
             </div>
+            
         </div>
     );
 };
