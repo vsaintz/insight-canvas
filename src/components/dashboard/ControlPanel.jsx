@@ -80,7 +80,7 @@ const ControlPanel = ({ onButtonClick }) => {
                     <button className="mx-auto hover:bg-[var(--secondary-color)] rounded-lg"><IoMdMore size={20} /></button>
                 </div>
             </div>
-            
+
         </div>
     );
 };
