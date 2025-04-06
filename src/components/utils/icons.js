@@ -7,6 +7,7 @@ import { IoMdMore } from "react-icons/io";
 import { CiSettings } from "react-icons/ci";
 import { IoMdHelpCircleOutline } from "react-icons/io";
 import { LuPanelLeft } from "react-icons/lu";
+import { BsLayoutSplit } from "react-icons/bs";
 
 export {
   FaGitlab,
@@ -18,4 +19,5 @@ export {
   CiSettings,
   IoMdHelpCircleOutline,
   LuPanelLeft,
+  BsLayoutSplit,
 };
