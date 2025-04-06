@@ -11,4 +11,6 @@ body {
     --font-color: white;
     --secondary-color: #2E2E2E;
     --global-gray: #757575;
+    --button-background: #2C2C2C;
+    --button-border: #767676;
 }
