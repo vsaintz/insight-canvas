@@ -1,12 +1,25 @@
-# React + Vite
+<p align="center">
+  <img src="https://img.shields.io/badge/node.js-v23.6.1-green?logo=node.js" alt="Node.js Version">
+  <img src="https://img.shields.io/badge/tailwindcss-v4.0-blue?logo=tailwindcss" alt="Tailwind CSS Version">
+  <img src="https://img.shields.io/badge/react-v19.0.0-61DAFB?logo=react" alt="React Version">
+  <img src="https://img.shields.io/badge/vite-purple?logo=vite" alt="Vite Version">
+  <img src="https://img.shields.io/badge/license-MIT-orange" alt="MIT License">
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Insight Canvas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Insight Canvas is a user-friendly, open-source web application designed to make data visualization accessible to everyone, regardless of technical expertise. With an intuitive interface, users can effortlessly create, customize, and export a variety of chart types. The application supports data imports from CSV, Excel, and JSON formats, ensuring flexibility for different use cases.
 
-## Expanding the ESLint configuration
+## Features
+- Supports multiple data formats (CSV, Excel, JSON)
+- Interactive visualizations with filtering and customization
+- Multiple chart types (Bar, Line, Scatter, Pie, etc.)
+- Export visualizations as images or PDFs
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Installation
+ To develop, you'll need Node.js, run `npm install` and to run the development server `npm run dev`
+
+## Contributing
+Feel free to contribute to this project! Whether you want to add a feature, fix a bug, or improve documentation, your help is welcome. Please fork the repository, create a new branch, and submit a pull request with your changes.
+ 
