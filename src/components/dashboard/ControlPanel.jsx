@@ -53,7 +53,7 @@ const ControlPanel = ({ onButtonClick }) => {
                         className={"flex items-center gap-2 p-1 my-[2px]  w-full rounded-lg hover:bg-[var(--secondary-color)]"}
                         onClick={() => onButtonClick(tool.id)}>
                         {tool.icon}
-                        <span className="text-sm">{tool.title}</span>
+                        <span className="tracking-wide">{tool.title}</span>
                     </button>
                 ))}
             </div>
@@ -66,7 +66,7 @@ const ControlPanel = ({ onButtonClick }) => {
                             key={userOption.id}
                             className={"flex items-center gap-2 p-1 my-[2px]  w-full rounded-lg hover:bg-[var(--secondary-color)]"}>
                             {userOption.icon}
-                            <span className="text-sm">{userOption.title}</span>
+                            <span className="text-sm tracking-wide">{userOption.title}</span>
                         </button>
                     ))}
                 </div>
@@ -77,7 +77,7 @@ const ControlPanel = ({ onButtonClick }) => {
                         <span className="text-sm">{profile.username}</span>
                         <span className="text-[0.7rem] text-gray-300">{profile.email}</span>
                     </div>
-                    <button className="mx-auto hover:bg-[var(--secondary-color)] rounded-lg"><IoMdMore size={20} /></button>
+                    <button className="mx-auto hover:bg-[var(--secondary-color)] rounded-lg cursor-pointer"><IoMdMore size={20} /></button>
                 </div>
             </div>
 
