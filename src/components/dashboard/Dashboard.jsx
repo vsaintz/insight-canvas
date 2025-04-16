@@ -6,7 +6,7 @@ import PlaceholderChart from "../charts/PlaceHolderChart";
 const Dashboard = () => {
     return (
         <div className="h-full flex flex-col">
-            <div className="m-5 h-[450px] bg-[var(--secondary-root)] border border-[var(--secondary-color)] rounded-2xl overflow-hidden">
+            <div className="flex justify-center items-center m-5 h-[500px] bg-[var(--secondary-root)] border border-[var(--secondary-color)] rounded-2xl overflow-hidden">
                 <PlaceholderChart />
             </div>
 
@@ -28,6 +28,11 @@ const Dashboard = () => {
                         <span>Customize Column</span>
                     </button>
                 </div>
+            </div>
+
+            <div className="m-5 h-96 bg-[var(--secondary-root)] border border-[var(--secondary-color)] rounded-2xl">
+                
+
             </div>
         </div>
 
