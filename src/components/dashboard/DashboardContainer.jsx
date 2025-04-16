@@ -22,7 +22,7 @@ const DashboardContainer = () => {
                     <h1 className="ml-4">Dashboard</h1>
                 </header>
 
-                <section className="flex-1 rounded-2xl">
+                <section className="flex-1 rounded-2xl overflow-y-scroll">
                     <MainPanel activeComponent={activeComponent} />
                 </section>
             </main>
