@@ -1,7 +1,6 @@
 import { BsLayoutSplit } from "react-icons/bs";
-
-import DropFileUploader from "../fileupload/DropFileUploader";
-import PlaceholderChart from "../charts/PlaceHolderChart";
+import DataPreviewTable from "@/components/table/DataPreviewTable"
+import PlaceholderChart from "@/components/charts/PlaceholderChart";
 
 const Dashboard = () => {
     return (
@@ -30,9 +29,8 @@ const Dashboard = () => {
                 </div>
             </div>
 
-            <div className="m-5 h-96 bg-[var(--secondary-root)] border border-[var(--secondary-color)] rounded-2xl">
-                
-
+            <div className="mx-5 mb-5 h-fit bg-[var(--secondary-root)] border border-[var(--secondary-color)] rounded-2xl">
+                <DataPreviewTable />
             </div>
         </div>
 
