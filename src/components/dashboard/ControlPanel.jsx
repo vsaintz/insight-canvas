@@ -7,7 +7,7 @@ import {
     IoMdMore,
     CiSettings,
     IoMdHelpCircleOutline,
-} from "../utils/icons";
+} from "@/components/utils/icons";
 
 const ControlPanel = ({ onButtonClick }) => {
 
