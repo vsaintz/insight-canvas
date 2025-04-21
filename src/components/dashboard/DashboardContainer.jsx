@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import ControlPanel from "./ControlPanel";
-import MainPanel from "./MainPanel";
-import { LuPanelLeft } from "../utils/icons";
+import ControlPanel from "@/components/dashboard/ControlPanel";
+import MainPanel from "@/components/dashboard/MainPanel";
+import { LuPanelLeft } from "@/components/utils/icons";
 
 const DashboardContainer = () => {
 
