@@ -1,5 +1,6 @@
-import Introduction from "../Introduction";
-import Dashboard from "./Dashboard";
+import Introduction from "@/components/Introduction";
+import Dashboard from "@/components/dashboard/Dashboard";
+
 
 const components = {
     'introduction': Introduction,
