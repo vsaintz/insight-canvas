@@ -1,27 +1,11 @@
 import React from 'react';
 import ReactECharts from 'echarts-for-react';
+import TempData from '@/data/tempdata.json';
 
-// Mock JSON data
-const data = [
-  { "Sale_Date": "2023-01-15", "Region": "North", "Product_Category": "Furniture", "Sales_Amount": 5200.50, "Quantity_Sold": 20 },
-  { "Sale_Date": "2023-01-20", "Region": "South", "Product_Category": "Electronics", "Sales_Amount": 3800.75, "Quantity_Sold": 15 },
-  { "Sale_Date": "2023-02-10", "Region": "East", "Product_Category": "Clothing", "Sales_Amount": 2500.30, "Quantity_Sold": 25 },
-  { "Sale_Date": "2023-02-25", "Region": "West", "Product_Category": "Food", "Sales_Amount": 4300.20, "Quantity_Sold": 18 },
-  { "Sale_Date": "2023-03-05", "Region": "North", "Product_Category": "Electronics", "Sales_Amount": 6100.90, "Quantity_Sold": 22 },
-  { "Sale_Date": "2023-03-18", "Region": "South", "Product_Category": "Furniture", "Sales_Amount": 4700.60, "Quantity_Sold": 19 },
-  { "Sale_Date": "2023-04-12", "Region": "East", "Product_Category": "Food", "Sales_Amount": 3200.45, "Quantity_Sold": 30 },
-  { "Sale_Date": "2023-04-28", "Region": "West", "Product_Category": "Clothing", "Sales_Amount": 2900.10, "Quantity_Sold": 27 },
-  { "Sale_Date": "2023-05-15", "Region": "North", "Product_Category": "Food", "Sales_Amount": 7700.80, "Quantity_Sold": 24 },
-  { "Sale_Date": "2023-05-22", "Region": "South", "Product_Category": "Clothing", "Sales_Amount": 3400.25, "Quantity_Sold": 28 },
-  { "Sale_Date": "2023-06-10", "Region": "East", "Product_Category": "Electronics", "Sales_Amount": 4800.70, "Quantity_Sold": 16 },
-  { "Sale_Date": "2023-06-25", "Region": "West", "Product_Category": "Furniture", "Sales_Amount": 5100.40, "Quantity_Sold": 21 },
-];
-
-// Aggregate data by month and region
 const aggregateByMonth = (data, groupBy) => {
   const result = {};
   data.forEach(item => {
-    const month = item.Sale_Date.slice(0, 7); // YYYY-MM
+    const month = item.Sale_Date.slice(0, 7);
     if (!result[month]) result[month] = {};
     result[month][item[groupBy]] = (result[month][item[groupBy]] || 0) + item.Sales_Amount;
   });
@@ -29,8 +13,8 @@ const aggregateByMonth = (data, groupBy) => {
 };
 
 const StackedAreaChart = () => {
-  const regionSalesData = aggregateByMonth(data, 'Region');
-  const months = [...new Set(data.map(item => item.Sale_Date.slice(0, 7)))].sort();
+  const regionSalesData = aggregateByMonth(TempData, 'Region');
+  const months = [...new Set(TempData.map(item => item.Sale_Date.slice(0, 7)))].sort();
 
   const regions = ['North', 'South', 'East', 'West'];
   const seriesData = regions.map((region, index) => ({
@@ -52,7 +36,7 @@ const StackedAreaChart = () => {
       axisLabel: { color: '#FFFFFF' },
       splitLine: {
         lineStyle: {
-          color: '#444444', // Custom color for horizontal grid lines
+          color: '#444444',
           width: 0.5, // Thickness of horizontal grid lines
         },
       },
