@@ -5,12 +5,11 @@ body {
 }
 
 :root {
-    --root-color: #151515;
-    --secondary-root: #0a0a0a;
-    --work-panel-bg: black;
-    --font-color: white;
-    --secondary-color: #2E2E2E;
-    --global-gray: #757575;
-    --button-background: #2C2C2C;
-    --button-border: #767676;
+    --color-bg-primary: #151515;         /* Main background */
+    --color-bg-secondary: #0a0a0a;       /* Darker background section */
+    --color-panel-work: #000000;         /* Specific for work panel background */
+    --color-text-primary: #ffffff;       /* Main font color */
+    --color-bg-tertiary: #2E2E2E;        /* Secondary UI elements */
+    --color-button-bg: #2C2C2C;          /* Button background */
+    --color-button-border: #767676;      /* Button border */
 }
