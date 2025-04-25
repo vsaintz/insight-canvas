@@ -2,7 +2,7 @@ import React from 'react';
 
 export function Table({ children, ...props }) {
   return (
-    <div className="w-full overflow-auto rounded-2xl">
+    <div className="w-[88rem] h-[500px] overflow-auto rounded-2xl">
       <table className="w-full text-left" {...props}>
         {children}
       </table>
@@ -12,7 +12,7 @@ export function Table({ children, ...props }) {
 
 export function TableHeader({ children, ...props }) {
   return (
-    <thead className="bg-[var(--root-color)]" {...props}>
+    <thead className="sticky top-0 bg-[var(--color-bg-primary)]" {...props}>
       {React.Children.map(children, (child) =>
         React.cloneElement(child, { noHover: true })
       )}
@@ -22,14 +22,14 @@ export function TableHeader({ children, ...props }) {
 
 export function TableBody({ children, ...props }) {
   return (
-    <tbody className="divide-y divide-[var(--secondary-color)]" {...props}>
+    <tbody className="divide-y divide-[var(--color-bg-tertiary)]" {...props}>
       {children}
     </tbody>
   );
 }
 
 export function TableRow({ children, noHover, ...props }) {
-  const baseClass = noHover ? '' : 'hover:bg-[var(--button-background)]';
+  const baseClass = noHover ? '' : 'hover:bg-[var(--color-button-bg)]';
   return (
     <tr className={baseClass} {...props}>
       {children}

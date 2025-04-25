@@ -83,7 +83,7 @@ const DropFileUploader = ({ onUploadSuccess }) => {
 
   return (
     <div
-      className="flex flex-col justify-center items-center w-3xl h-60 bg-[var(--secondary-root)] border border-[var(--secondary-color)] rounded-2xl"
+      className="flex flex-col justify-center items-center w-3xl h-60 bg-[var(--color-bg-secondary)] border border-[var(--color-bg-tertiary)] rounded-2xl"
       onDragOver={handleDragOver}
       onDrop={handleDrop}
     >
