@@ -29,7 +29,7 @@ const Dashboard = () => {
                 </div>
             </div>
 
-            <div className="max-w-full mx-5 mb-5 h-fit bg-[var(--color-bg-secondary)] border border-[var(--color-bg-tertiary)] rounded-2xl">
+            <div className="mx-5 m-auto mb-5 h-fit bg-[var(--color-bg-secondary)] border border-[var(--color-bg-tertiary)] rounded-2xl">
                 <DataPreviewTable />
             </div>
         </div>

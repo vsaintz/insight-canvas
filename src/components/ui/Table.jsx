@@ -2,7 +2,7 @@ import React from 'react';
 
 export function Table({ children, ...props }) {
   return (
-    <div className="w-[88rem] h-[500px] overflow-auto rounded-2xl">
+    <div className="w-full h-[500px] overflow-auto rounded-2xl">
       <table className="w-full text-left" {...props}>
         {children}
       </table>

@@ -14,16 +14,16 @@ import {
     flexRender
 } from '@tanstack/react-table'
 
-import cvjsonfile from '@/data/csvjson.json'
+import tempdata from '@/data/tempdata.json'
 
 const columnHelper = createColumnHelper()
 
 const DataPreviewTable = () => {
-    if (!cvjsonfile || cvjsonfile.length === 0) {
+    if (!tempdata || tempdata.length === 0) {
         return <div>No data available</div>
     }
 
-    const columns = Object.keys(cvjsonfile[0]).map((key) =>
+    const columns = Object.keys(tempdata[0]).map((key) =>
         columnHelper.accessor(key, {
             header: key,
             cell: info => {
@@ -34,7 +34,7 @@ const DataPreviewTable = () => {
     )
 
     const table = useReactTable({
-        data: cvjsonfile,
+        data: tempdata,
         columns,
         getCoreRowModel: getCoreRowModel(),
     })

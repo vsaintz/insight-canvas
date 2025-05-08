@@ -23,18 +23,18 @@ const Introduction = () => {
 
             <section className="space-y-4">
                 <h2 className="text-2xl font-semibold">Installation</h2>
-                <pre className="bg-[var(--secondary-color)] p-4 rounded-lg">
+                <pre className="bg-[var(--color-bg-secondary)] p-4 rounded-lg">
                     npm install insight-canvas
                 </pre>
                 <p>After installation, import the component in your React application:</p>
-                <pre className="bg-[var(--secondary-color)] p-4 rounded-lg">
+                <pre className="bg-[var(--color-bg-secondary)] p-4 rounded-lg">
                     import InsightCanvas from 'insight-canvas';
                 </pre>
             </section>
 
             <section className="space-y-4">
                 <h2 className="text-2xl font-semibold">Usage</h2>
-                <pre className="bg-[var(--secondary-color)] p-4 rounded-lg">
+                <pre className="bg-[var(--color-bg-secondary)] p-4 rounded-lg">
                     {`<InsightCanvas
     data={sampleData}
     chartType="bar"
