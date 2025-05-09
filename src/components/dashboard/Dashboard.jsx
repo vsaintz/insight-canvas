@@ -15,10 +15,10 @@ const Dashboard = () => {
                         Overview
                     </button>
                     <button className="py-1 px-3 rounded-xl border border-transparent hover:bg-[var(--color-button-bg)] hover:border-[var(--color-button-border)] transition-colors duration-20 cursor-pointer">
-                        Delete Columns
+                        Charts
                     </button>
                     <button className="py-1 px-3 rounded-xl border border-transparent hover:bg-[var(--color-button-bg)] hover:border-[var(--color-button-border)] transition-colors duration-200 cursor-pointer">
-                        Delete Columns
+                        Colour
                     </button>
                 </div>
                 <div className="p-2">
