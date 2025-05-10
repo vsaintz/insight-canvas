@@ -8,6 +8,7 @@ import { CiSettings } from "react-icons/ci";
 import { IoMdHelpCircleOutline } from "react-icons/io";
 import { LuPanelLeft } from "react-icons/lu";
 import { BsLayoutSplit } from "react-icons/bs";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 export {
   FaGitlab,
@@ -20,4 +21,5 @@ export {
   IoMdHelpCircleOutline,
   LuPanelLeft,
   BsLayoutSplit,
+  RiArrowDropDownLine,
 };

@@ -1,4 +1,7 @@
-import { BsLayoutSplit } from "react-icons/bs";
+import {
+    BsLayoutSplit,
+    RiArrowDropDownLine,
+} from "@/components/utils/icons";
 import DataPreviewTable from "@/components/table/DataPreviewTable"
 import PlaceholderChart from "@/components/charts/PlaceholderChart";
 
@@ -22,9 +25,11 @@ const Dashboard = () => {
                     </button>
                 </div>
                 <div className="p-2">
-                    <button className="flex items-center gap-3 py-1 px-3 rounded-lg bg-[var(--color-button-bg)] border border-[var(--color-button-border)] cursor-pointer hover:bg-[var(--color-bg-primary)]">
+                    <button className="flex items-center gap-2 py-1 px-3 rounded-lg bg-[var(--color-button-bg)] border border-[var(--color-button-border)] cursor-pointer hover:bg-[var(--color-bg-primary)]">
                         <BsLayoutSplit size={16} />
                         <span>Customize Column</span>
+                        <RiArrowDropDownLine size={25}/>
+
                     </button>
                 </div>
             </div>
