@@ -7,7 +7,7 @@ const Introduction = () => {
             <section className="space-y-4">
                 <h2 className="text-2xl font-semibold">Introduction</h2>
                 <p>
-                    Insight Canvas is a lightweight data visualization application designed to help users create insightful and interactive visualizations effortlessly. This documentation provides an overview of its features, installation steps, and usage instructions. Including its limitation and cons.
+                    Insight Canvas is a lightweight data visualization application designed to help users create insightful and interactive visualizations effortlessly. This documentation provides an overview of its features, installation steps, and usage instructions.
                 </p>
             </section>
 
