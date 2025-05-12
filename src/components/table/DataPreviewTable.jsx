@@ -7,8 +7,6 @@ import {
     TableRow
 } from '@/components/ui/table'
 
-// ohh hello
-
 import {
     useReactTable,
     getCoreRowModel,
