@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Introduction = () => {
     return (
         <div className="p-10 space-y-6">
