@@ -37,7 +37,6 @@ const ControlPanel = ({ onButtonClick }) => {
     return (
         <div className="flex flex-col gap-7 h-full">
 
-            {/* Branding Section */}
             <div className="p-6 text-[var(--color-text-primary)]">
                 <div className="flex items-center gap-3 mb-5">
                     {branding.icon}
@@ -45,7 +44,6 @@ const ControlPanel = ({ onButtonClick }) => {
                 </div>
             </div>
 
-            {/* Tools Section */}
             <div className="flex flex-col gap-1 px-6  text-[var(--color-text-primary)]">
                 {tools.map((tool) => (
                     <button
@@ -58,7 +56,6 @@ const ControlPanel = ({ onButtonClick }) => {
                 ))}
             </div>
 
-            {/* Profile Section */}
             <div className="mt-auto p-5">
                 <div className="my-10 text-[var(--color-text-primary)]">
                     {userOptions.map((userOption) => (
