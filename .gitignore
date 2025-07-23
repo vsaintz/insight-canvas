@@ -1,0 +1,40 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Vite local server cache
+.vite/
+
+# Static files cache
+*.cache/
+
+# Python virtual environments
+.venv/
+.venv.*
+
+# IDE specific files
+.vscode/
+
+# System-specific files
+.DS_Store
+Thumbs.db
+
+# Testing outputs
+coverage/
+
+# Temp files
+*.tmp
+*.pid
+*.seed
+*.pid.lock
