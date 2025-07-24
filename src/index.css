@@ -1,0 +1,9 @@
+@import "tailwindcss";  
+
+:root {
+    --font-family: "Montserrat", serif;
+    --primary-bg: rgb(0, 0, 0);
+    --main-bg-color: #000000;
+    --sidebar-width: 20%;
+    --chart-area: 60%;
+}
