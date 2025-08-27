@@ -1,5 +1,31 @@
 @import "tailwindcss";  
 
+@theme {
+  --color-bg-primary: #000;
+  --color-bg-secondary: #f9fafb;
+  --color-border: #2e2e2e;
+  --color-bg-hover: #111;
+
+  --color-text-primary: #E5E7EB;
+  --color-text-secondary: #818181;
+  --color-accent: #FFFFFF3C;
+}
+
+body {
+  color: var(--color-text-primary);
+  margin: 0;
+  padding: 0;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 :root {
     --font-family: "Montserrat", serif;
     --primary-bg: rgb(0, 0, 0);
