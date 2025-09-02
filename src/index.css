@@ -2,16 +2,20 @@
 
 @theme {
   --color-bg-primary: #000;
-  --color-bg-secondary: #f9fafb;
+  --color-bg-secondary: #111;
   --color-border: #2e2e2e;
-  --color-bg-hover: #111;
+  --color-bg-hover: #222;
+  --color-bg-error: #3b1618;
 
   --color-text-primary: #E5E7EB;
   --color-text-secondary: #818181;
+  --color-text-error: #ba464a;
   --color-accent: #FFFFFF3C;
 }
 
 body {
+  background-color: var(--color-bg-primary);
+  font-family: var(--font-primary);
   color: var(--color-text-primary);
   margin: 0;
   padding: 0;
@@ -27,7 +31,6 @@ body {
 }
 
 :root {
-    --font-family: "Montserrat", serif;
     --primary-bg: rgb(0, 0, 0);
     --main-bg-color: #000000;
     --sidebar-width: 20%;

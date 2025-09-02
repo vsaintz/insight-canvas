@@ -5,7 +5,7 @@ const About = () => {
         <p>about</p>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default About;
+export default About
