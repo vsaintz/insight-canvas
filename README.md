@@ -18,7 +18,7 @@ Insight Canvas is a user-friendly, open-source web application designed to make 
 - Export visualizations as images or PDFs
 
 ## Installation
- To develop, you'll need Node.js, run `pnpm install` and to run the development server `pnpm dev`
+ To develop, you'll need Node.js, run `yarn install` and to run the development server `yarn dev`
 
 ## Contributing
 Feel free to contribute to this project! Whether you want to add a feature, fix a bug, or improve documentation, your help is welcome. Please fork the repository, create a new branch, and submit a pull request with your changes.
