@@ -1,14 +1,19 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routes import router 
+from routes import router
 
 app = FastAPI()
 
+origins = [
+    "https://insight-canvas.vercel.app", 
+    "http://localhost:5173",                   
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  
-    allow_credentials=True, 
-    allow_methods=["*"], 
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 
