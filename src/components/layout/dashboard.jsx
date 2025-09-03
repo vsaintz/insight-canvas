@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-import Sidebar from "@/components/layout/Sidebar"
+import Sidebar from "@/components/layout/sidebar"
 import FileUpload from "@/components/file-upload"
 import ChartDisplay from "@/components/chart-display"
 import ChartColumnSelector from "@/components/chart-column-selector"
