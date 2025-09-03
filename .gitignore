@@ -40,3 +40,4 @@ coverage/
 *.pid.lock
 
 .env
+.env.local
