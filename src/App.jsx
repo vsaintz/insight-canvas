@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
-import Index from "@/index"
+import Index from "@/components/index"
 import Navigation from "@/components/layout/navigation"
 import About from "@/components/layout/about"
 import Contact from "@/components/layout/contact"
