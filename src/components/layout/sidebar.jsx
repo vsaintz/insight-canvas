@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react"
 import {
-    Box, PanelLeft, X, TriangleDashed, ChevronDown, Activity,
+    Box, PanelLeft, X, ChevronDown, Activity,
     Download, ChevronUp, Settings, Database, FileText, User, MessageCircleQuestionMark, LogOut
 } from 'lucide-react'
+
+import Logo from "@/logo"
 
 export default function Sidebar({ onMobileClose, onSelectChart }) {
     const [collapsed, setCollapsed] = useState(false)
@@ -63,10 +65,10 @@ export default function Sidebar({ onMobileClose, onSelectChart }) {
                     >
                         {collapsed
                             ? (logoHovered
-                                ? <PanelLeft size={20} />
-                                : <TriangleDashed size={20} />)
+                                ? <PanelLeft size={25} />
+                                : <Logo />)
                             : <>
-                                <TriangleDashed size={20} />
+                                <Logo />
                                 <h1 className="text-lg">Insight Canvas</h1>
                             </>
                         }
