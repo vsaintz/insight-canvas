@@ -1,42 +1,28 @@
-import { useState } from "react"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom"
 
 import Index from "@/components/index"
 import Navigation from "@/components/layout/navigation"
-import About from "@/components/layout/about"
-import Contact from "@/components/layout/contact"
+import Dashboard from "@/components/layout/dashboard"
 
-import DashBoard from "@/components/layout/dashboard"
-
-const App = () => {
-  const [currentStep, setCurrentStep] = useState("index")
-
-  const handleGetStarted = () => {
-    setCurrentStep("workflow")
-  }
+function Layout() {
+  const location = useLocation()
+  const hideNav = location.pathname === "/dashboard"
 
   return (
-    <Router>
-      <Navigation showNav={currentStep === "index"} />
-
+    <>
+      {!hideNav && <Navigation />}
       <Routes>
-        <Route
-          path="/"
-          element={
-            currentStep === "index" ? (
-              <Index onGetStarted={handleGetStarted} />
-            ) : (
-              <div className="w-full h-full">
-                <DashBoard />
-              </div>
-            )
-          }
-        />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Index />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
-    </Router>
+    </>
   )
 }
 
-export default App
+export default function App() {
+  return (
+    <Router>
+      <Layout />
+    </Router>
+  )
+}
