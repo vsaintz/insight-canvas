@@ -1,9 +1,10 @@
-@import "tailwindcss";  
+@import "tailwindcss";
 
 @theme {
   --color-bg-primary: #000;
   --color-bg-secondary: #111;
   --color-border: #2e2e2e;
+  --color-white-border: #E5E5E0;
   --color-bg-hover: #222;
   --color-bg-error: #3b1618;
 
@@ -13,9 +14,24 @@
   --color-accent: #FFFFFF3C;
 }
 
+@theme inline {
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+}
+
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
+
 body {
   background-color: var(--color-bg-primary);
-  font-family: var(--font-primary);
   color: var(--color-text-primary);
   margin: 0;
   padding: 0;
@@ -31,8 +47,8 @@ body {
 }
 
 :root {
-    --primary-bg: rgb(0, 0, 0);
-    --main-bg-color: #000000;
-    --sidebar-width: 20%;
-    --chart-area: 60%;
+  --primary-bg: rgb(0, 0, 0);
+  --main-bg-color: #000000;
+  --sidebar-width: 20%;
+  --chart-area: 60%;
 }

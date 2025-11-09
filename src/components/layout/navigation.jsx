@@ -1,31 +1,29 @@
 import { Link } from "react-router-dom"
+import Logo from "@/logo"
 
-const Navigation = ({ showNav }) => {
-  if (!showNav) return null
+const Navigation = () => {
 
   return (
-    <header className="flex justify-between items-center p-5 px-10">
+    <header className="flex justify-between w-full items-center p-5 sm:pr-10 mb-10">
       <div>
-        <strong>Insight Canvas</strong>
-      </div>
-      <nav>
         <Link
           to="/"
-          className="ml-5 no-underline text-base hover:underline"
+          className='flex items-center gap-2'>
+          <Logo /> <strong className='hidden sm:block'>Insight Canvas</strong>
+        </Link>
+      </div>
+      <nav className='flex gap-5 items-center'>
+        <Link
+          to="/"
+          className="font-medium no-underline hover:underline"
         >
-          Home
+          SignIn
         </Link>
         <Link
-          to="/about"
-          className="ml-5 no-underline text-base hover:underline"
+          to="/"
+          className="no-underline font-medium text-black bg-white rounded-md px-3 py-1 hover:underline"
         >
-          About
-        </Link>
-        <Link
-          to="/contact"
-          className="ml-5 no-underline text-base hover:underline"
-        >
-          Contact
+          SignUp
         </Link>
       </nav>
     </header>

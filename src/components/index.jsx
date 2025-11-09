@@ -1,60 +1,50 @@
-const Index = ({ onGetStarted }) => {
-  return (
-    <>
-      <section className="text-center p-20 pt-56">
-        <h1 className="text-4xl mb-1.5 font-light ">
-          Minimalistic Data Visualization
-        </h1>
-        <p className="text-base text-text-secondary max-w-[600px] mx-auto">
-          Simplify your data analysis with our clean and intuitive tools
-          designed for clarity and efficiency.
-        </p>
-        <button
-          onClick={onGetStarted}
-          className="block my-5 mx-auto px-5 py-3 text-base w-[150px] rounded-lg bg-bg-primary border border-border no-underline text-center"
-        >
-          Get Started
-        </button>
-      </section>
-      <section className="features flex justify-between px-5 py-10 mx-10 border-t border-border">
-        <div className="feature flex-1 mx-2 text-center">
-          <h3 className="text-lg mt-2">Interactive Charts</h3>
-          <p className="text-text-secondary text-sm mt-1">
-            Create elegant, customizable charts that make data easy to
-            understand.
-          </p>
-        </div>
-        <div className="feature flex-1 mx-2 text-center">
-          <h3 className="text-lg mt-2">Real-Time Updates</h3>
-          <p className="text-text-secondary text-sm mt-1">
-            View live data as it happens, ensuring you’re always up-to-date.
-          </p>
-        </div>
-        <div className="feature flex-1 mx-2 text-center">
-          <h3 className="text-lg mt-2">Secure and Reliable</h3>
-          <p className="text-text-secondary text-sm mt-1">
-            Trust our platform to keep your data safe and accessible.
-          </p>
-        </div>
-      </section>
+import { MoveRight, Files } from "lucide-react"
+import { useNavigate } from "react-router-dom"
 
-      <section className="footer-section absolute inset-x-0 bottom-0 flex justify-center items-center border-t border-border">
-        <footer className="px-10 py-5 text-sm text-text-secondary">
-          <p>
-            &copy; 2025 Insight Canvas. All rights reserved.
-            <a href="#terms" className="text-blue-500 hover:underline">
-              {" "}
-              Terms
-            </a>{" "}
-            <a href="#privacy" className="text-blue-500 hover:underline">
-              {" "}
-              Privacy
-            </a>
-          </p>
-        </footer>
-      </section>
-    </>
+import Button from "@/components/ui/button"
+import HeaderImage from "@/assets/images/8CA2B134-A00A-41C5-97CE-359EC5E02889.png"
+
+export default function LandingPage() {
+  const navigate = useNavigate()
+
+  return (
+    <main className="flex flex-col items-center justify-center">
+      <header className="flex flex-col items-center gap-10 py-10 px-2">
+        <div className="flex flex-col items-center sm:flex-row">
+          <Button label="Version 1.0" textColor="text-black" bgColor="bg-white" className="text-sm py-1 w-fit" />
+          <Button label="What's new in the latest version" RightIcon={MoveRight} textColor="text-white" bgColor="bg-transparent" className="text-sm py-1 px-1 sm:px-3 underline underline-offset-2 w-fit" />
+        </div>
+
+        <div className='flex flex-col text-center gap-2'>
+          <p className='text-sm font-bold'>Insight Canvas</p>
+          <p className='text-4xl sm:text-6xl'>A free and open source <br /> data visualization</p>
+          <p className='text-sm sm:text-md font-medium mt-3'>Simplify your data analysis with our clean and intuitive tools designed for clarity and efficiency.</p>
+        </div>
+
+        <div className='flex gap-3 mt-5'>
+          <Button
+            label="Dashboard"
+            textColor="text-black hover:underline"
+            onClick={() => navigate("/dashboard")}
+            bgColor="bg-white"
+            className="rounded-none"
+          />
+          <Button
+            LeftIcon={Files}
+            label="Learn more"
+            textColor="text-white hover:underline"
+            bgColor="transparent"
+          />
+        </div>
+      </header>
+
+      <div className="px-4 sm:px-10 md:px-20 lg:px-40 mb-10 flex justify-center">
+        <img
+          src={HeaderImage}
+          alt="Header"
+          className="w-full max-w-7xl border border-border object-contain"
+        />
+      </div>
+    </main>
   )
 }
-
-export default Index
