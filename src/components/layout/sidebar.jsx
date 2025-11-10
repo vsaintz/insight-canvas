@@ -109,7 +109,7 @@ export default function Sidebar({ onMobileClose, onSelectChart }) {
                         rightIcon={ChevronDown}
                     />
                     {chartsMenuOpen && !collapsed && (
-                        <div className="flex flex-col border-l border-border pl-3 ml-5 mt-3 items-start">
+                        <div className="flex flex-col border-l border-border rounded-2xl pl-3 ml-5 mt-3 items-start">
                             {charts.map((item, i) => (
                                 <button
                                     key={i}
