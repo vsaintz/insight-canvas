@@ -45,7 +45,7 @@ const chartRequirements = {
   area: {
     requiredColumns: 2,
     description:
-      "Select one category and one value column (area version of line chart)",
+      "Select one category and one value column",
   },
 }
 
